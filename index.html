@@ -4,332 +4,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Privacy Policy - ReNotification!</title>
-
-<meta name="description" content="Privacy Policy for ReNotification! Android application.">
+<meta name="theme-color" content="#081321">
+<meta name="description" content="Privacy Policy for ReNotification!">
+<title>Privacy Policy — ReNotification!</title>
 
 <style>
 :root {
-    --bg: #07111f;
-    --surface: #0d1b2b;
-    --surface-light: #122438;
-    --border: rgba(255,255,255,0.08);
-    --text: #e8f0fa;
-    --muted: #9aacc2;
-    --accent: #65d5ff;
-    --accent-soft: rgba(101,213,255,0.12);
-    --green: #78e0b0;
+  --bg: #081321;
+  --card: #101f31;
+  --card2: #13263b;
+  --text: #eaf2fb;
+  --muted: #a6b7cb;
+  --accent: #66d5ff;
+  --border: rgba(255,255,255,.08);
 }
 
 * {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background:
-        radial-gradient(circle at top right, #102a43 0%, transparent 38%),
-        var(--bg);
-    color: var(--text);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                 "Segoe UI", Roboto, sans-serif;
-    line-height: 1.7;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
 }
 
-a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+[hidden] {
+  display: none !important;
 }
 
 .container {
-    width: min(100% - 32px, 900px);
-    margin: auto;
+  width: min(900px, calc(100% - 32px));
+  margin: auto;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* HEADER */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(18px);
-    background: rgba(7,17,31,0.88);
-    border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8,19,33,.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-inner {
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.brand-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 14px;
-    background: var(--accent-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent);
-    font-size: 22px;
-    font-weight: 800;
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(102,213,255,.13);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 21px;
 }
 
 .brand-name {
-    font-size: 17px;
-    font-weight: 750;
-    letter-spacing: -0.3px;
+  font-size: 17px;
+  font-weight: 800;
 }
 
-.brand-subtitle {
-    font-size: 11px;
-    color: var(--muted);
+.brand-caption {
+  font-size: 11px;
+  color: var(--muted);
 }
 
 .lang-button {
-    border: 1px solid rgba(101,213,255,0.35);
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: 50px;
-    padding: 10px 16px;
-    font-size: 13px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.2s;
+  border: 1px solid rgba(102,213,255,.35);
+  background: rgba(102,213,255,.1);
+  color: var(--accent);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 13px;
 }
 
-.lang-button:hover {
-    background: rgba(101,213,255,0.2);
-}
-
-/* LANGUAGE SWITCH */
-
-html[lang="id"] [data-lang="en"] {
-    display: none !important;
-}
-
-html[lang="en"] [data-lang="id"] {
-    display: none !important;
+.lang-button:active {
+  transform: scale(.96);
 }
 
 /* HERO */
 
 .hero {
-    padding: 64px 0 38px;
+  padding: 58px 0 24px;
 }
 
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 12px;
-    border: 1px solid rgba(101,213,255,0.2);
-    background: var(--accent-soft);
-    border-radius: 50px;
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 700;
+.badge {
+  display: inline-flex;
+  border: 1px solid rgba(102,213,255,.2);
+  background: rgba(102,213,255,.08);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .hero h1 {
-    font-size: clamp(34px, 7vw, 56px);
-    line-height: 1.15;
-    letter-spacing: -1.8px;
-    margin: 20px 0 14px;
+  font-size: clamp(36px, 7vw, 58px);
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+  margin: 20px 0 12px;
 }
 
-.hero h1 span {
-    color: var(--accent);
+.hero h1 .accent {
+  color: var(--accent);
 }
 
 .hero-description {
-    color: var(--muted);
-    max-width: 650px;
-    font-size: 16px;
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 15px;
 }
 
 .updated {
-    margin-top: 20px;
-    font-size: 13px;
-    color: var(--muted);
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 18px;
 }
 
 /* SUMMARY */
 
-.summary-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin: 28px 0;
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 28px 0;
 }
 
 .summary-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 18px;
 }
 
-.summary-card .icon {
-    font-size: 23px;
-    margin-bottom: 10px;
+.summary-icon {
+  font-size: 22px;
+  margin-bottom: 8px;
 }
 
 .summary-card h3 {
-    margin: 0 0 6px;
-    font-size: 15px;
+  margin: 0 0 6px;
+  font-size: 14px;
 }
 
 .summary-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 13px;
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
 }
 
-/* CONTENT */
+/* SECTIONS */
 
 .content {
-    padding: 20px 0 60px;
+  padding: 10px 0 55px;
 }
 
 .section {
-    margin-bottom: 18px;
-    padding: 24px;
-    border-radius: 20px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    scroll-margin-top: 90px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  margin: 16px 0;
+  scroll-margin-top: 85px;
 }
 
 .section h2 {
-    font-size: 19px;
-    letter-spacing: -0.3px;
-    margin: 0 0 16px;
+  margin: 0 0 14px;
+  font-size: 18px;
+  letter-spacing: -.3px;
 }
 
 .section h3 {
-    font-size: 15px;
-    margin: 20px 0 8px;
+  font-size: 14px;
+  margin: 20px 0 6px;
 }
 
 .section p {
-    color: #c2d0df;
-    font-size: 14px;
-    margin: 10px 0;
+  color: #c4d2e2;
+  font-size: 14px;
+  margin: 10px 0;
 }
 
 .section ul {
-    padding-left: 22px;
-    color: #c2d0df;
-    font-size: 14px;
+  padding-left: 22px;
+  color: #c4d2e2;
+  font-size: 14px;
 }
 
 .section li {
-    margin: 8px 0;
+  padding: 3px 0;
 }
 
 .highlight {
-    border: 1px solid rgba(101,213,255,0.18);
-    background: rgba(101,213,255,0.05);
-    padding: 16px;
-    border-radius: 14px;
-    margin: 16px 0;
+  background: rgba(102,213,255,.05);
+  border: 1px solid rgba(102,213,255,.16);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0;
 }
 
 .highlight p {
-    margin: 0;
+  margin: 0;
 }
 
-.contact-card {
-    border: 1px solid rgba(101,213,255,0.2);
-    background: var(--accent-soft);
-    padding: 18px;
-    border-radius: 16px;
-}
-
-.contact-card a {
-    font-weight: 700;
+.contact {
+  background: rgba(102,213,255,.07);
+  border: 1px solid rgba(102,213,255,.2);
+  padding: 18px;
+  border-radius: 15px;
 }
 
 /* FOOTER */
 
 footer {
-    border-top: 1px solid var(--border);
-    padding: 30px 0;
-    color: var(--muted);
-    font-size: 12px;
-    text-align: center;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 28px 16px;
+  color: var(--muted);
+  font-size: 12px;
 }
 
-.footer-brand {
-    color: var(--text);
-    font-weight: 700;
-    margin-bottom: 6px;
+footer strong {
+  color: var(--text);
 }
 
 /* MOBILE */
 
 @media (max-width: 600px) {
+  .hero {
+    padding-top: 40px;
+  }
 
-    .hero {
-        padding-top: 42px;
-    }
+  .hero h1 {
+    font-size: 38px;
+  }
 
-    .hero h1 {
-        font-size: 37px;
-    }
+  .section {
+    padding: 19px;
+    border-radius: 17px;
+  }
 
-    .hero-description {
-        font-size: 14px;
-    }
+  .summary {
+    gap: 10px;
+  }
 
-    .summary-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
+  .summary-card {
+    padding: 14px;
+  }
 
-    .summary-card {
-        padding: 15px;
-    }
-
-    .summary-card p {
-        font-size: 12px;
-    }
-
-    .section {
-        padding: 19px;
-        border-radius: 17px;
-    }
-
-    .section h2 {
-        font-size: 17px;
-    }
-
-    .brand-subtitle {
-        display: none;
-    }
-
-    .header-inner {
-        min-height: 64px;
-    }
+  .brand-caption {
+    display: none;
+  }
 }
 </style>
 </head>
@@ -337,440 +291,681 @@ footer {
 <body>
 
 <header>
-    <div class="container header-inner">
+  <div class="container header-inner">
 
-        <div class="brand">
-            <div class="brand-icon">R</div>
-
-            <div>
-                <div class="brand-name">ReNotification!</div>
-                <div class="brand-subtitle">Privacy & Transparency</div>
-            </div>
-        </div>
-
-        <button
-            type="button"
-            class="lang-button"
-            id="langBtn"
-            onclick="toggleLanguage()">
-            EN
-        </button>
-
+    <div class="brand">
+      <div class="logo">R</div>
+      <div>
+        <div class="brand-name">ReNotification!</div>
+        <div class="brand-caption">Privacy & Transparency</div>
+      </div>
     </div>
+
+    <button type="button" class="lang-button" id="langBtn">
+      EN
+    </button>
+
+  </div>
 </header>
 
 <main class="container">
 
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="hero-badge">
-            <span>🔒</span>
-            <span data-lang="id">Privasi Anda adalah prioritas</span>
-            <span data-lang="en">Your privacy matters</span>
-        </div>
-
-        <h1>
-            <span data-lang="id">Kebijakan<br>Privasi</span>
-            <span data-lang="en">Privacy<br>Policy</span>
-            <span>ReNotification!</span>
-        </h1>
-
-        <p class="hero-description" data-lang="id">
-            ReNotification! dirancang dengan pendekatan privasi lokal.
-            Informasi notifikasi diproses di perangkat Anda dan tidak
-            dikirim ke server kami.
-        </p>
-
-        <p class="hero-description" data-lang="en">
-            ReNotification! is designed with a local-first privacy approach.
-            Notification information is processed on your device and is
-            not transmitted to our servers.
-        </p>
-
-        <div class="updated">
-            <span data-lang="id">Terakhir diperbarui: 23 November 2026</span>
-            <span data-lang="en">Last updated: November 23, 2026</span>
-        </div>
-
-    </section>
-
-    <!-- SUMMARY CARDS -->
-
-    <div class="summary-grid">
-
-        <div class="summary-card">
-            <div class="icon">📱</div>
-
-            <h3 data-lang="id">Pemrosesan Lokal</h3>
-            <h3 data-lang="en">Local Processing</h3>
-
-            <p data-lang="id">
-                Data diproses langsung di perangkat.
-            </p>
-            <p data-lang="en">
-                Data is processed directly on your device.
-            </p>
-        </div>
-
-        <div class="summary-card">
-            <div class="icon">🚫</div>
-
-            <h3 data-lang="id">Tanpa Pelacakan</h3>
-            <h3 data-lang="en">No Tracking</h3>
-
-            <p data-lang="id">
-                Tidak menggunakan iklan atau analytics.
-            </p>
-            <p data-lang="en">
-                No advertising or analytics.
-            </p>
-        </div>
-
-        <div class="summary-card">
-            <div class="icon">🌐</div>
-
-            <h3 data-lang="id">Tanpa Server</h3>
-            <h3 data-lang="en">No Servers</h3>
-
-            <p data-lang="id">
-                Tidak mengirim data ke server eksternal.
-            </p>
-            <p data-lang="en">
-                No data sent to external servers.
-            </p>
-        </div>
-
-        <div class="summary-card">
-            <div class="icon">🛡️</div>
-
-            <h3 data-lang="id">Kontrol Pengguna</h3>
-            <h3 data-lang="en">User Control</h3>
-
-            <p data-lang="id">
-                Anda mengontrol izin dan akses aplikasi.
-            </p>
-            <p data-lang="en">
-                You control app permissions and access.
-            </p>
-        </div>
-
-    </div>
-
-    <!-- PRIVACY CONTENT -->
-
-    <div class="content">
-
-        <!-- 1 -->
-
-        <section class="section" id="introduction">
-
-            <h2>
-                <span data-lang="id">1. Pendahuluan</span>
-                <span data-lang="en">1. Introduction</span>
-            </h2>
-
-            <p data-lang="id">
-                ReNotification! adalah aplikasi Android yang membantu
-                mengelola dan mengingatkan pengguna tentang notifikasi
-                tertentu. Kebijakan ini menjelaskan bagaimana aplikasi
-                mengakses, menggunakan, menyimpan, dan melindungi
-                informasi di perangkat Anda.
-            </p>
-
-            <p data-lang="en">
-                ReNotification! is an Android application that helps users
-                manage and receive reminders about selected notifications.
-                This policy explains how the app accesses, uses, stores,
-                and protects information on your device.
-            </p>
-
-            <div class="highlight">
-                <p data-lang="id">
-                    <strong>Prinsip utama:</strong> ReNotification!
-                    tidak memiliki server pengumpulan data pengguna.
-                    Pemrosesan aplikasi berlangsung secara lokal di perangkat.
-                </p>
-
-                <p data-lang="en">
-                    <strong>Core principle:</strong> ReNotification!
-                    does not operate a user data collection server.
-                    App processing takes place locally on your device.
-                </p>
-            </div>
-
-        </section>
-
-        <!-- 2 -->
-
-        <section class="section" id="information">
-
-            <h2>
-                <span data-lang="id">2. Informasi yang Diakses</span>
-                <span data-lang="en">2. Information Accessed</span>
-            </h2>
-
-            <p data-lang="id">
-                Aplikasi dapat mengakses informasi berikut sesuai
-                fitur yang Anda aktifkan:
-            </p>
-
-            <p data-lang="en">
-                The app may access the following information
-                depending on the features you enable:
-            </p>
-
-            <ul data-lang="id">
-                <li>Informasi notifikasi dari aplikasi yang Anda pilih.</li>
-                <li>Nama aplikasi sumber notifikasi.</li>
-                <li>Konten notifikasi yang diperlukan untuk fungsi pengingat.</li>
-                <li>Preferensi dan konfigurasi pengingat.</li>
-                <li>Pengaturan suara atau file ringtone yang Anda pilih.</li>
-            </ul>
-
-            <ul data-lang="en">
-                <li>Notification information from apps you select.</li>
-                <li>The source application name.</li>
-                <li>Notification content required for reminder functionality.</li>
-                <li>Reminder preferences and configurations.</li>
-                <li>Sound settings or ringtone files you select.</li>
-            </ul>
-
-            <p data-lang="id">
-                Informasi tersebut hanya diakses sejauh diperlukan
-                untuk menjalankan fungsi aplikasi.
-            </p>
-
-            <p data-lang="en">
-                This information is accessed only to the extent
-                necessary for the app's functionality.
-            </p>
-
-        </section>
-
-        <!-- 3 -->
-
-        <section class="section" id="usage">
-
-            <h2>
-                <span data-lang="id">3. Bagaimana Informasi Digunakan</span>
-                <span data-lang="en">3. How Information Is Used</span>
-            </h2>
-
-            <p data-lang="id">
-                Informasi yang diakses digunakan untuk:
-            </p>
-
-            <p data-lang="en">
-                Accessed information is used to:
-            </p>
-
-            <ul data-lang="id">
-                <li>Mendeteksi notifikasi yang sesuai dengan aturan Anda.</li>
-                <li>Membuat dan mengelola sesi pengingat.</li>
-                <li>Menampilkan riwayat notifikasi yang relevan.</li>
-                <li>Menjalankan fitur suara dan pengingat.</li>
-                <li>Menyimpan preferensi aplikasi.</li>
-            </ul>
-
-            <ul data-lang="en">
-                <li>Detect notifications matching your rules.</li>
-                <li>Create and manage reminder sessions.</li>
-                <li>Display relevant notification history.</li>
-                <li>Run reminder and sound features.</li>
-                <li>Save app preferences.</li>
-            </ul>
-
-            <div class="highlight">
-
-                <p data-lang="id">
-                    Informasi notifikasi tidak digunakan untuk iklan,
-                    profil pengguna, atau pelacakan lintas aplikasi.
-                </p>
-
-                <p data-lang="en">
-                    Notification information is not used for advertising,
-                    user profiling, or cross-app tracking.
-                </p>
-
-            </div>
-
-        </section>
-
-        <!-- 4 -->
-
-        <section class="section" id="storage">
-
-            <h2>
-                <span data-lang="id">4. Penyimpanan Data</span>
-                <span data-lang="en">4. Data Storage</span>
-            </h2>
-
-            <p data-lang="id">
-                Data aplikasi disimpan secara lokal pada perangkat
-                Android Anda menggunakan penyimpanan internal aplikasi.
-            </p>
-
-            <p data-lang="en">
-                App data is stored locally on your Android device
-                using the app's internal storage.
-            </p>
-
-            <p data-lang="id">
-                Penyimpanan lokal yang digunakan meliputi:
-            </p>
-
-            <p data-lang="en">
-                Local storage includes:
-            </p>
-
-            <ul data-lang="id">
-                <li>Database lokal untuk data pengingat dan riwayat.</li>
-                <li>Data preferensi dan konfigurasi aplikasi.</li>
-                <li>Data sementara yang diperlukan untuk pemulihan fungsi tertentu.</li>
-            </ul>
-
-            <ul data-lang="en">
-                <li>Local database for reminder data and history.</li>
-                <li>App preferences and configuration data.</li>
-                <li>Temporary data required for certain recovery functions.</li>
-            </ul>
-
-            <p data-lang="id">
-                Database utama dan file preferensi pemulihan volume
-                sementara dikecualikan dari backup Android.
-                Preferensi aplikasi tertentu yang tidak sensitif
-                dapat disertakan dalam backup sistem Android
-                sesuai pengaturan perangkat Anda.
-            </p>
-
-            <p data-lang="en">
-                The main database and temporary volume-recovery
-                preference file are excluded from Android backups.
-                Certain non-sensitive app preferences may be
-                included in Android system backups depending
-                on your device settings.
-            </p>
-
-        </section>
-
-        <!-- 5 -->
-
-        <section class="section" id="sharing">
-
-            <h2>
-                <span data-lang="id">5. Berbagi dan Pengiriman Data</span>
-                <span data-lang="en">5. Data Sharing and Transmission</span>
-            </h2>
-
-            <p data-lang="id">
-                ReNotification! tidak mengirim informasi notifikasi,
-                riwayat, atau data pribadi Anda ke server pengembang.
-            </p>
-
-            <p data-lang="en">
-                ReNotification! does not send your notification
-                information, history, or personal data to developer servers.
-            </p>
-
-            <ul data-lang="id">
-                <li>Tidak memiliki akun pengguna.</li>
-                <li>Tidak memiliki server pengumpulan data.</li>
-                <li>Tidak menggunakan analytics.</li>
-                <li>Tidak menggunakan advertising SDK.</li>
-                <li>Tidak menjual atau membagikan data pribadi.</li>
-            </ul>
-
-            <ul data-lang="en">
-                <li>No user accounts.</li>
-                <li>No data collection servers.</li>
-                <li>No analytics services.</li>
-                <li>No advertising SDKs.</li>
-                <li>No sale or sharing of personal data.</li>
-            </ul>
-
-            <p data-lang="id">
-                Aplikasi tidak memerlukan izin INTERNET
-                untuk fungsi utamanya.
-            </p>
-
-            <p data-lang="en">
-                The app does not require the INTERNET permission
-                for its core functionality.
-            </p>
-
-        </section>
-
-        <!-- 6 -->
-
-        <section class="section" id="permissions">
-
-            <h2>
-                <span data-lang="id">6. Izin Android</span>
-                <span data-lang="en">6. Android Permissions</span>
-            </h2>
-
-            <p data-lang="id">
-                Beberapa fitur memerlukan izin khusus Android
-                agar dapat berfungsi. Anda dapat mengelola
-                atau mencabut izin tersebut melalui pengaturan sistem.
-            </p>
-
-            <p data-lang="en">
-                Some features require special Android permissions
-                to function. You can manage or revoke these permissions
-                through your system settings.
-            </p>
-
-            <h3 data-lang="id">Akses Notifikasi</h3>
-            <h3 data-lang="en">Notification Access</h3>
-
-            <p data-lang="id">
-                Digunakan untuk mendeteksi dan memproses notifikasi
-                yang diperlukan oleh fitur pengingat. Akses ini
-                hanya aktif setelah Anda memberikan persetujuan
-                melalui pengaturan Android.
-            </p>
-
-            <p data-lang="en">
-                Used to detect and process notifications required
-                by reminder features. This access is enabled only
-                after you grant permission through Android settings.
-            </p>
-
-            <h3 data-lang="id">Notifikasi Aplikasi</h3>
-            <h3 data-lang="en">App Notifications</h3>
-
-            <p data-lang="id">
-                Digunakan untuk menampilkan notifikasi pengingat
-                yang dibuat oleh ReNotification!.
-            </p>
-
-            <p data-lang="en">
-                Used to display reminder notifications
-                created by ReNotification!.
-            </p>
-
-            <h3 data-lang="id">Alarm dan Pengingat Terjadwal</h3>
-            <h3 data-lang="en">Scheduled Alarms and Reminders</h3>
-
-            <p data-lang="id">
-                Fitur tertentu menggunakan mekanisme penjadwalan
-                Android agar pengingat dapat berjalan sesuai waktu.
-                Jika izin alarm tepat tidak tersedia, aplikasi
-                dapat menggunakan mekanisme alternatif dengan
-                keterbatasan ketepatan waktu.
-            </p>
-
-            <p data-lang="en">
-                Certain features use Android scheduling mechanisms
-                to run reminders at the intended time.
-                If exact alarm access is unavailable, the app
-                may use an alternative scheduling method
-                with reduced timing precision.
-            </p>
-
-        </section>
-
-        <!--
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="badge">
+    <span data-id>🔒 Privasi Anda adalah prioritas</span>
+    <span data-en hidden>🔒 Your privacy matters</span>
+  </div>
+
+  <h1>
+    <span data-id>Kebijakan<br>Privasi</span>
+    <span data-en hidden>Privacy<br>Policy</span>
+    <span class="accent">ReNotification!</span>
+  </h1>
+
+  <p class="hero-description" data-id>
+    ReNotification! dirancang dengan pendekatan privasi lokal.
+    Informasi notifikasi diproses di perangkat Anda dan tidak
+    dikirim ke server kami.
+  </p>
+
+  <p class="hero-description" data-en hidden>
+    ReNotification! is designed with a local-first privacy approach.
+    Notification information is processed on your device and is not
+    transmitted to our servers.
+  </p>
+
+  <div class="updated">
+    <span data-id>Terakhir diperbarui: 23 November 2026</span>
+    <span data-en hidden>Last updated: November 23, 2026</span>
+  </div>
+
+</section>
+
+<!-- SUMMARY -->
+
+<div class="summary">
+
+  <div class="summary-card">
+    <div class="summary-icon">📱</div>
+    <h3>
+      <span data-id>Pemrosesan Lokal</span>
+      <span data-en hidden>Local Processing</span>
+    </h3>
+    <p>
+      <span data-id>Data diproses langsung di perangkat.</span>
+      <span data-en hidden>Data is processed on your device.</span>
+    </p>
+  </div>
+
+  <div class="summary-card">
+    <div class="summary-icon">🚫</div>
+    <h3>
+      <span data-id>Tanpa Pelacakan</span>
+      <span data-en hidden>No Tracking</span>
+    </h3>
+    <p>
+      <span data-id>Tanpa iklan atau analytics.</span>
+      <span data-en hidden>No ads or analytics.</span>
+    </p>
+  </div>
+
+  <div class="summary-card">
+    <div class="summary-icon">🌐</div>
+    <h3>
+      <span data-id>Tanpa Server</span>
+      <span data-en hidden>No Servers</span>
+    </h3>
+    <p>
+      <span data-id>Tidak mengirim data ke server eksternal.</span>
+      <span data-en hidden>No data sent to external servers.</span>
+    </p>
+  </div>
+
+  <div class="summary-card">
+    <div class="summary-icon">🛡️</div>
+    <h3>
+      <span data-id>Kontrol Pengguna</span>
+      <span data-en hidden>User Control</span>
+    </h3>
+    <p>
+      <span data-id>Anda mengontrol izin aplikasi.</span>
+      <span data-en hidden>You control app permissions.</span>
+    </p>
+  </div>
+
+</div>
+
+<div class="content">
+
+<!-- 1 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>1. Pendahuluan</span>
+    <span data-en hidden>1. Introduction</span>
+  </h2>
+
+  <p data-id>
+    ReNotification! adalah aplikasi Android yang membantu
+    mengelola dan mengingatkan pengguna tentang notifikasi
+    tertentu. Kebijakan ini menjelaskan bagaimana aplikasi
+    mengakses, menggunakan, menyimpan, dan melindungi
+    informasi di perangkat Anda.
+  </p>
+
+  <p data-en hidden>
+    ReNotification! is an Android application that helps users
+    manage and receive reminders about selected notifications.
+    This policy explains how the app accesses, uses, stores,
+    and protects information on your device.
+  </p>
+
+  <div class="highlight">
+    <p data-id>
+      <strong>Prinsip utama:</strong> Informasi diproses secara
+      lokal. ReNotification! tidak memiliki server pengumpulan
+      data pengguna.
+    </p>
+
+    <p data-en hidden>
+      <strong>Core principle:</strong> Information is processed locally.
+      ReNotification! does not operate a user data collection server.
+    </p>
+  </div>
+
+</section>
+
+<!-- 2 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>2. Informasi yang Diakses</span>
+    <span data-en hidden>2. Information Accessed</span>
+  </h2>
+
+  <p data-id>
+    Bergantung pada fitur yang Anda gunakan, aplikasi dapat
+    mengakses informasi berikut:
+  </p>
+
+  <p data-en hidden>
+    Depending on the features you use, the app may access:
+  </p>
+
+  <ul data-id>
+    <li>Informasi notifikasi dari aplikasi yang Anda pilih.</li>
+    <li>Nama aplikasi sumber notifikasi.</li>
+    <li>Konten notifikasi yang diperlukan untuk fungsi pengingat.</li>
+    <li>Preferensi dan konfigurasi pengingat.</li>
+    <li>Pengaturan suara atau file ringtone pilihan Anda.</li>
+  </ul>
+
+  <ul data-en hidden>
+    <li>Notification information from apps you select.</li>
+    <li>The source application name.</li>
+    <li>Notification content required for reminder functionality.</li>
+    <li>Reminder preferences and configurations.</li>
+    <li>Sound settings or ringtone files you select.</li>
+  </ul>
+
+  <p data-id>
+    Informasi tersebut diakses hanya sejauh diperlukan
+    untuk menjalankan fungsi aplikasi.
+  </p>
+
+  <p data-en hidden>
+    This information is accessed only to the extent necessary
+    for the app's functionality.
+  </p>
+
+</section>
+
+<!-- 3 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>3. Penggunaan Informasi</span>
+    <span data-en hidden>3. Use of Information</span>
+  </h2>
+
+  <p data-id>Informasi digunakan untuk:</p>
+  <p data-en hidden>Information is used to:</p>
+
+  <ul data-id>
+    <li>Mendeteksi notifikasi yang sesuai dengan aturan Anda.</li>
+    <li>Membuat dan mengelola sesi pengingat.</li>
+    <li>Menampilkan riwayat notifikasi yang relevan.</li>
+    <li>Menjalankan fitur suara dan pengingat.</li>
+    <li>Menyimpan preferensi aplikasi.</li>
+  </ul>
+
+  <ul data-en hidden>
+    <li>Detect notifications matching your rules.</li>
+    <li>Create and manage reminder sessions.</li>
+    <li>Display relevant notification history.</li>
+    <li>Run reminder and sound features.</li>
+    <li>Save app preferences.</li>
+  </ul>
+
+  <div class="highlight">
+    <p data-id>
+      Informasi notifikasi tidak digunakan untuk iklan,
+      profil pengguna, atau pelacakan lintas aplikasi.
+    </p>
+
+    <p data-en hidden>
+      Notification information is not used for advertising,
+      user profiling, or cross-app tracking.
+    </p>
+  </div>
+
+</section>
+
+<!-- 4 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>4. Penyimpanan Data</span>
+    <span data-en hidden>4. Data Storage</span>
+  </h2>
+
+  <p data-id>
+    Data aplikasi disimpan secara lokal di perangkat Android
+    Anda menggunakan penyimpanan internal aplikasi.
+  </p>
+
+  <p data-en hidden>
+    App data is stored locally on your Android device
+    using the app's internal storage.
+  </p>
+
+  <p data-id>Penyimpanan lokal meliputi:</p>
+  <p data-en hidden>Local storage includes:</p>
+
+  <ul data-id>
+    <li>Database lokal untuk data pengingat dan riwayat.</li>
+    <li>Data preferensi dan konfigurasi aplikasi.</li>
+    <li>Data sementara untuk pemulihan fungsi tertentu.</li>
+  </ul>
+
+  <ul data-en hidden>
+    <li>Local database for reminder data and history.</li>
+    <li>App preferences and configuration data.</li>
+    <li>Temporary data for certain recovery functions.</li>
+  </ul>
+
+  <p data-id>
+    Database utama dan file preferensi pemulihan volume
+    sementara dikecualikan dari backup Android.
+    Preferensi aplikasi tertentu yang tidak sensitif dapat
+    disertakan dalam backup sistem Android sesuai
+    pengaturan perangkat Anda.
+  </p>
+
+  <p data-en hidden>
+    The main database and temporary volume-recovery
+    preference file are excluded from Android backups.
+    Certain non-sensitive app preferences may be included
+    in Android system backups depending on your device settings.
+  </p>
+
+</section>
+
+<!-- 5 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>5. Berbagi dan Pengiriman Data</span>
+    <span data-en hidden>5. Data Sharing and Transmission</span>
+  </h2>
+
+  <p data-id>
+    ReNotification! tidak mengirim informasi notifikasi,
+    riwayat, atau data pribadi Anda ke server pengembang.
+  </p>
+
+  <p data-en hidden>
+    ReNotification! does not send notification information,
+    history, or personal data to developer servers.
+  </p>
+
+  <ul data-id>
+    <li>Tidak memiliki akun pengguna.</li>
+    <li>Tidak memiliki server pengumpulan data.</li>
+    <li>Tidak menggunakan analytics.</li>
+    <li>Tidak menggunakan advertising SDK.</li>
+    <li>Tidak menjual atau membagikan data pribadi.</li>
+  </ul>
+
+  <ul data-en hidden>
+    <li>No user accounts.</li>
+    <li>No data collection servers.</li>
+    <li>No analytics services.</li>
+    <li>No advertising SDKs.</li>
+    <li>No sale or sharing of personal data.</li>
+  </ul>
+
+  <p data-id>
+    Aplikasi tidak memerlukan izin INTERNET
+    untuk fungsi utamanya.
+  </p>
+
+  <p data-en hidden>
+    The app does not require the INTERNET permission
+    for its core functionality.
+  </p>
+
+</section>
+
+<!-- 6 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>6. Izin Android</span>
+    <span data-en hidden>6. Android Permissions</span>
+  </h2>
+
+  <p data-id>
+    Beberapa fitur memerlukan izin khusus Android.
+    Anda dapat mengelola atau mencabut izin tersebut
+    melalui pengaturan sistem.
+  </p>
+
+  <p data-en hidden>
+    Some features require special Android permissions.
+    You can manage or revoke these permissions
+    through your system settings.
+  </p>
+
+  <h3>
+    <span data-id>Akses Notifikasi</span>
+    <span data-en hidden>Notification Access</span>
+  </h3>
+
+  <p data-id>
+    Digunakan untuk mendeteksi dan memproses notifikasi
+    yang diperlukan oleh fitur pengingat. Akses ini aktif
+    setelah Anda memberikan persetujuan melalui Android.
+  </p>
+
+  <p data-en hidden>
+    Used to detect and process notifications required
+    by reminder features. This access is enabled only
+    after you grant permission through Android.
+  </p>
+
+  <h3>
+    <span data-id>Notifikasi Aplikasi</span>
+    <span data-en hidden>App Notifications</span>
+  </h3>
+
+  <p data-id>
+    Digunakan untuk menampilkan notifikasi pengingat
+    yang dibuat oleh ReNotification!.
+  </p>
+
+  <p data-en hidden>
+    Used to display reminder notifications
+    created by ReNotification!.
+  </p>
+
+  <h3>
+    <span data-id>Alarm dan Pengingat Terjadwal</span>
+    <span data-en hidden>Scheduled Alarms and Reminders</span>
+  </h3>
+
+  <p data-id>
+    Fitur tertentu menggunakan penjadwalan Android agar
+    pengingat berjalan sesuai waktu. Jika izin alarm tepat
+    tidak tersedia, aplikasi dapat menggunakan mekanisme
+    alternatif dengan keterbatasan ketepatan waktu.
+  </p>
+
+  <p data-en hidden>
+    Certain features use Android scheduling to run reminders
+    at the intended time. If exact alarm access is unavailable,
+    the app may use an alternative scheduling method
+    with reduced timing precision.
+  </p>
+
+</section>
+
+<!-- 7 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>7. Keamanan dan Privasi</span>
+    <span data-en hidden>7. Security and Privacy</span>
+  </h2>
+
+  <p data-id>
+    Data disimpan dalam ruang penyimpanan internal Android
+    yang dilindungi oleh mekanisme sandbox sistem operasi.
+  </p>
+
+  <p data-en hidden>
+    Data is stored in Android's internal storage,
+    protected by the operating system's sandbox.
+  </p>
+
+  <p data-id>
+    ReNotification! tidak menyediakan enkripsi database khusus
+    pada tingkat aplikasi. Keamanan data juga bergantung
+    pada keamanan perangkat, pengunci layar,
+    dan sistem operasi Android Anda.
+  </p>
+
+  <p data-en hidden>
+    ReNotification! does not provide separate app-level
+    database encryption. Data security also depends on
+    your device security, screen lock,
+    and Android operating system.
+  </p>
+
+  <p data-id>
+    Notifikasi pada layar kunci mengikuti pengaturan
+    privasi Android dan dapat ditampilkan secara terbatas
+    untuk mengurangi paparan informasi.
+  </p>
+
+  <p data-en hidden>
+    Lock-screen notifications follow Android privacy
+    settings and may be displayed in a redacted form
+    to reduce information exposure.
+  </p>
+
+</section>
+
+<!-- 8 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>8. Retensi dan Penghapusan Data</span>
+    <span data-en hidden>8. Data Retention and Deletion</span>
+  </h2>
+
+  <p data-id>
+    Data disimpan selama diperlukan untuk fungsi aplikasi
+    atau sampai Anda menghapusnya.
+  </p>
+
+  <p data-en hidden>
+    Data is retained as long as necessary
+    for app functionality or until you delete it.
+  </p>
+
+  <p data-id>
+    Anda dapat menghapus data melalui fitur
+    penghapusan riwayat yang tersedia di aplikasi,
+    jika berlaku.
+  </p>
+
+  <p data-en hidden>
+    You can delete data through the app's history
+    deletion feature, where available.
+  </p>
+
+  <p data-id>
+    Menghapus data aplikasi melalui pengaturan Android
+    atau mencopot aplikasi akan menghapus data lokal
+    terkait sesuai mekanisme Android.
+  </p>
+
+  <p data-en hidden>
+    Clearing app data through Android settings or uninstalling
+    the app removes associated local data according
+    to Android's system behavior.
+  </p>
+
+</section>
+
+<!-- 9 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>9. Layanan Pihak Ketiga</span>
+    <span data-en hidden>9. Third-Party Services</span>
+  </h2>
+
+  <p data-id>
+    ReNotification! tidak mengintegrasikan SDK iklan,
+    analytics, atau layanan pelacakan pihak ketiga
+    untuk mengumpulkan data pengguna.
+  </p>
+
+  <p data-en hidden>
+    ReNotification! does not integrate advertising SDKs,
+    analytics, or third-party tracking services
+    to collect user data.
+  </p>
+
+  <p data-id>
+    Aplikasi menggunakan fitur dan API Android
+    yang disediakan oleh sistem operasi untuk
+    menjalankan fungsi yang diminta pengguna.
+  </p>
+
+  <p data-en hidden>
+    The app uses Android system features and APIs
+    to perform functions requested by the user.
+  </p>
+
+</section>
+
+<!-- 10 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>10. Privasi Anak</span>
+    <span data-en hidden>10. Children's Privacy</span>
+  </h2>
+
+  <p data-id>
+    ReNotification! tidak dirancang untuk mengumpulkan
+    informasi pribadi anak-anak. Aplikasi tidak memiliki akun,
+    pengumpulan data online, atau sistem profil pengguna.
+  </p>
+
+  <p data-en hidden>
+    ReNotification! is not designed to collect personal
+    information from children. The app does not have accounts,
+    online data collection, or user profiling systems.
+  </p>
+
+</section>
+
+<!-- 11 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>11. Perubahan Kebijakan</span>
+    <span data-en hidden>11. Policy Changes</span>
+  </h2>
+
+  <p data-id>
+    Kebijakan Privasi ini dapat diperbarui apabila terdapat
+    perubahan fitur atau persyaratan yang relevan.
+    Versi terbaru akan dipublikasikan di halaman ini
+    beserta tanggal pembaruan.
+  </p>
+
+  <p data-en hidden>
+    This Privacy Policy may be updated when relevant features
+    or requirements change. The latest version will be published
+    on this page along with its revision date.
+  </p>
+
+</section>
+
+<!-- 12 -->
+
+<section class="section">
+
+  <h2>
+    <span data-id>12. Hubungi Kami</span>
+    <span data-en hidden>12. Contact Us</span>
+  </h2>
+
+  <p data-id>
+    Jika Anda memiliki pertanyaan, masukan,
+    atau permintaan terkait privasi aplikasi,
+    silakan hubungi pengembang.
+  </p>
+
+  <p data-en hidden>
+    If you have questions, feedback, or requests
+    regarding app privacy, please contact the developer.
+  </p>
+
+  <div class="contact">
+    <p>
+      <strong>
+        <span data-id>Email Pengembang</span>
+        <span data-en hidden>Developer Email</span>
+      </strong>
+    </p>
+
+    <a href="mailto:wahyu3gs@gmail.com">
+      wahyu3gs@gmail.com
+    </a>
+  </div>
+
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>ReNotification!</strong>
+
+    <p>
+      <span data-id>Dibuat dengan fokus pada privasi dan kontrol pengguna.</span>
+      <span data-en hidden>Built with a focus on privacy and user control.</span>
+    </p>
+
+    <p>© 2026 ReNotification!</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  let language = "id";
+
+  function applyLanguage(newLanguage) {
+    language = newLanguage;
+
+    document.documentElement.setAttribute("lang", language);
+
+    document.querySelectorAll("[data-id]").forEach(function (element) {
+      element.hidden = language !== "id";
+    });
+
+    document.querySelectorAll("[data-en]").forEach(function (element) {
+      element.hidden = language !== "en";
+    });
+
+    const button = document.getElementById("langBtn");
+
+    if (button) {
+      button.textContent = language === "id" ? "EN" : "ID";
+      button.setAttribute(
+        "aria-label",
+        language === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"
+      );
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("langBtn");
+
+    if (button) {
+      button.addEventListener("click", function () {
+        applyLanguage(language === "id" ? "en" : "id");
+      });
+    }
+
+    applyLanguage("id");
+  });
+
+})();
+</script>
+
+</body>
+</html>
