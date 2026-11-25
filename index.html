@@ -2,969 +2,730 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#081321">
-<meta name="description" content="Privacy Policy for ReNotification!">
-<title>Privacy Policy — ReNotification!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
 
-<style>
-:root {
-  --bg: #081321;
-  --card: #101f31;
-  --card2: #13263b;
-  --text: #eaf2fb;
-  --muted: #a6b7cb;
-  --accent: #66d5ff;
-  --border: rgba(255,255,255,.08);
-}
+  <title>Privacy Policy - ReNotification!</title>
+  <meta name="description" content="Privacy Policy for ReNotification! Android application. Learn how notification data and Google Play Billing information are handled.">
 
-* {
-  box-sizing: border-box;
-}
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --surface: #111c2e;
+      --surface-2: #17243a;
+      --text: #e8eef8;
+      --muted: #a8b5c9;
+      --accent: #79b8ff;
+      --border: #293a54;
+      --success: #8ddbb0;
+    }
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.7;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-[hidden] {
-  display: none !important;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
 
-.container {
-  width: min(900px, calc(100% - 32px));
-  margin: auto;
-}
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    .container {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-/* HEADER */
+    header {
+      padding: 64px 0 38px;
+      text-align: center;
+    }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(8,19,33,.94);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-}
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      font-size: 30px;
+    }
 
-.header-inner {
-  min-height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 40px);
+      letter-spacing: -1px;
+    }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    .subtitle {
+      color: var(--muted);
+      margin-top: 8px;
+    }
 
-.logo {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  background: rgba(102,213,255,.13);
-  color: var(--accent);
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  font-size: 21px;
-}
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 18px;
+    }
 
-.brand-name {
-  font-size: 17px;
-  font-weight: 800;
-}
+    .language-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 18, 32, .94);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
 
-.brand-caption {
-  font-size: 11px;
-  color: var(--muted);
-}
+    .language-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
 
-.lang-button {
-  border: 1px solid rgba(102,213,255,.35);
-  background: rgba(102,213,255,.1);
-  color: var(--accent);
-  padding: 10px 18px;
-  border-radius: 50px;
-  font-weight: 800;
-  cursor: pointer;
-  font-size: 13px;
-}
+    .language-controls button {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 9px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-.lang-button:active {
-  transform: scale(.96);
-}
+    .language-controls button.active {
+      background: var(--accent);
+      color: #071426;
+      border-color: var(--accent);
+    }
 
-/* HERO */
+    main {
+      padding: 34px 0 60px;
+    }
 
-.hero {
-  padding: 58px 0 24px;
-}
+    .notice {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
 
-.badge {
-  display: inline-flex;
-  border: 1px solid rgba(102,213,255,.2);
-  background: rgba(102,213,255,.08);
-  color: var(--accent);
-  padding: 6px 12px;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 700;
-}
+    .notice strong {
+      color: var(--success);
+    }
 
-.hero h1 {
-  font-size: clamp(36px, 7vw, 58px);
-  line-height: 1.15;
-  letter-spacing: -1.8px;
-  margin: 20px 0 12px;
-}
+    .policy-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
 
-.hero h1 .accent {
-  color: var(--accent);
-}
+    h2 {
+      font-size: 19px;
+      line-height: 1.45;
+      margin: 0 0 14px;
+      color: var(--accent);
+    }
 
-.hero-description {
-  max-width: 660px;
-  color: var(--muted);
-  font-size: 15px;
-}
+    h3 {
+      font-size: 16px;
+      margin: 22px 0 8px;
+    }
 
-.updated {
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 18px;
-}
+    p {
+      margin: 10px 0;
+    }
 
-/* SUMMARY */
+    ul {
+      padding-left: 22px;
+    }
 
-.summary {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin: 28px 0;
-}
+    li {
+      margin: 7px 0;
+    }
 
-.summary-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 18px;
-  border-radius: 18px;
-}
+    .muted {
+      color: var(--muted);
+    }
 
-.summary-icon {
-  font-size: 22px;
-  margin-bottom: 8px;
-}
+    .contact {
+      background: var(--surface-2);
+      border-radius: 12px;
+      padding: 18px;
+      margin-top: 14px;
+    }
 
-.summary-card h3 {
-  margin: 0 0 6px;
-  font-size: 14px;
-}
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-.summary-card p {
-  margin: 0;
-  font-size: 12px;
-  color: var(--muted);
-}
+    [hidden] {
+      display: none !important;
+    }
 
-/* SECTIONS */
+    @media (max-width: 600px) {
+      header {
+        padding-top: 42px;
+      }
 
-.content {
-  padding: 10px 0 55px;
-}
+      .policy-section {
+        padding: 19px;
+      }
 
-.section {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 24px;
-  margin: 16px 0;
-  scroll-margin-top: 85px;
-}
-
-.section h2 {
-  margin: 0 0 14px;
-  font-size: 18px;
-  letter-spacing: -.3px;
-}
-
-.section h3 {
-  font-size: 14px;
-  margin: 20px 0 6px;
-}
-
-.section p {
-  color: #c4d2e2;
-  font-size: 14px;
-  margin: 10px 0;
-}
-
-.section ul {
-  padding-left: 22px;
-  color: #c4d2e2;
-  font-size: 14px;
-}
-
-.section li {
-  padding: 3px 0;
-}
-
-.highlight {
-  background: rgba(102,213,255,.05);
-  border: 1px solid rgba(102,213,255,.16);
-  border-radius: 14px;
-  padding: 16px;
-  margin: 16px 0;
-}
-
-.highlight p {
-  margin: 0;
-}
-
-.contact {
-  background: rgba(102,213,255,.07);
-  border: 1px solid rgba(102,213,255,.2);
-  padding: 18px;
-  border-radius: 15px;
-}
-
-/* FOOTER */
-
-footer {
-  border-top: 1px solid var(--border);
-  text-align: center;
-  padding: 28px 16px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-footer strong {
-  color: var(--text);
-}
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-  .hero {
-    padding-top: 40px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .section {
-    padding: 19px;
-    border-radius: 17px;
-  }
-
-  .summary {
-    gap: 10px;
-  }
-
-  .summary-card {
-    padding: 14px;
-  }
-
-  .brand-caption {
-    display: none;
-  }
-}
-</style>
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container header-inner">
-
-    <div class="brand">
-      <div class="logo">R</div>
-      <div>
-        <div class="brand-name">ReNotification!</div>
-        <div class="brand-caption">Privacy & Transparency</div>
-      </div>
+  <div class="container">
+    <div class="logo" aria-hidden="true">🔔</div>
+    <h1>ReNotification!</h1>
+    <div class="subtitle" id="headerSubtitle">
+      Kebijakan Privasi
     </div>
-
-    <button type="button" class="lang-button" id="langBtn">
-      EN
-    </button>
-
+    <div class="meta">
+      <span id="updatedLabel">Terakhir diperbarui:</span>
+      25 November 2026
+    </div>
   </div>
 </header>
 
+<nav class="language-bar" aria-label="Language selection">
+  <div class="container language-controls">
+    <button id="idButton" class="active" type="button"
+      onclick="setLanguage('id')">Bahasa Indonesia</button>
+    <button id="enButton" type="button"
+      onclick="setLanguage('en')">English</button>
+  </div>
+</nav>
+
 <main class="container">
 
-<!-- HERO -->
+  <!-- INDONESIAN VERSION -->
+  <div id="policy-id" lang="id">
 
-<section class="hero">
+    <div class="notice">
+      <strong>Ringkasan privasi</strong>
+      <p>
+        ReNotification! memproses data notifikasi secara lokal di perangkat.
+        Konten notifikasi tidak dikirim ke server pengembang. Pembelian
+        Premium Lifetime ditangani melalui Google Play Billing.
+      </p>
+    </div>
 
-  <div class="badge">
-    <span data-id>🔒 Privasi Anda adalah prioritas</span>
-    <span data-en hidden>🔒 Your privacy matters</span>
+    <section class="policy-section">
+      <h2>1. Pemrosesan dan Data Notifikasi Lokal</h2>
+
+      <p>
+        ReNotification! menggunakan izin Akses Notifikasi Android untuk
+        membaca notifikasi yang diterima perangkat dan menjalankan fungsi
+        pengingat atau pengulangan notifikasi sesuai pengaturan pengguna.
+      </p>
+
+      <p>Informasi yang dapat diakses meliputi:</p>
+      <ul>
+        <li>Nama aplikasi sumber notifikasi.</li>
+        <li>Judul notifikasi.</li>
+        <li>Isi atau teks notifikasi.</li>
+        <li>Waktu notifikasi diterima.</li>
+        <li>Daftar aplikasi yang tersedia pada perangkat untuk pengaturan pemantauan.</li>
+      </ul>
+
+      <p>
+        Notifikasi dapat berisi informasi pribadi, pesan, kode OTP,
+        atau informasi transaksi. Pengguna bertanggung jawab atas
+        aplikasi yang dipilih untuk dipantau.
+      </p>
+
+      <p>
+        Data notifikasi diproses dan disimpan secara lokal di perangkat.
+        ReNotification! tidak mengirimkan konten notifikasi tersebut
+        ke server pengembang.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>2. Tujuan Penggunaan Data Notifikasi</h2>
+
+      <p>
+        Informasi notifikasi digunakan hanya untuk menyediakan fungsi
+        utama aplikasi, termasuk:
+      </p>
+
+      <ul>
+        <li>Mengulang atau mengingatkan kembali notifikasi.</li>
+        <li>Menerapkan interval dan jumlah pengulangan yang ditentukan pengguna.</li>
+        <li>Mengikuti jadwal aktif dan pengaturan jam tenang.</li>
+        <li>Menerapkan filter kata kunci sesuai konfigurasi pengguna.</li>
+        <li>Menjalankan perlindungan anti-spam dan pencegahan notifikasi duplikat.</li>
+        <li>Mencatat riwayat notifikasi secara lokal.</li>
+      </ul>
+
+      <p>
+        Data tersebut tidak digunakan untuk iklan, pelacakan perilaku,
+        atau dijual kepada pihak lain oleh pengembang.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>3. Google Play Billing dan Pembelian Premium Lifetime</h2>
+
+      <p>
+        ReNotification! menyediakan pembelian Premium Lifetime melalui
+        Google Play Billing. Produk ini merupakan pembelian satu kali
+        (one-time, non-consumable), bukan langganan berulang.
+      </p>
+
+      <p>
+        Transaksi pembayaran diproses dan dikelola oleh Google Play.
+        Informasi pembayaran sensitif seperti nomor kartu, nomor rekening,
+        atau kredensial pembayaran tidak diakses maupun disimpan oleh
+        ReNotification!.
+      </p>
+
+      <p>
+        Aplikasi menerima informasi status pembelian yang diperlukan
+        untuk memeriksa kepemilikan produk dan memberikan akses fitur
+        Premium. Pengakuan transaksi (acknowledgement) juga dilakukan
+        melalui Google Play Billing.
+      </p>
+
+      <p>
+        Untuk mempertahankan status akses Premium secara lokal, aplikasi
+        menyimpan cache entitlement yang dilindungi menggunakan
+        HMAC-SHA256 dan Android Keystore. Cache menyimpan hash token
+        pembelian, bukan token mentah.
+      </p>
+
+      <p>
+        Token pembelian mentah tidak dicatat ke log aplikasi dan tidak
+        disimpan sebagai token mentah dalam cache entitlement.
+        ReNotification! tidak memiliki backend server untuk menerima
+        atau memverifikasi token pembelian.
+      </p>
+
+      <p>
+        Jika Google Play sementara tidak dapat dihubungi, aplikasi dapat
+        menggunakan status Premium yang sebelumnya telah diverifikasi
+        selama masa grace offline maksimal 7 hari. Setelah masa tersebut
+        berakhir tanpa verifikasi ulang yang valid, akses Premium dapat
+        kembali ke status Free.
+      </p>
+
+      <p>
+        Informasi lebih lanjut mengenai pengelolaan data Google:
+        <a href="https://policies.google.com/privacy"
+           target="_blank" rel="noopener noreferrer">
+          Google Privacy Policy
+        </a>.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>4. Izin Aplikasi, Data Sharing, dan Layanan Pihak Ketiga</h2>
+
+      <p>
+        ReNotification! menggunakan izin Android sesuai fungsi aplikasi,
+        termasuk Akses Notifikasi dan izin lain yang diperlukan untuk
+        menjalankan pengingat, jadwal, serta perlindungan proses.
+      </p>
+
+      <p>
+        Pada merged manifest versi yang diaudit, izin
+        <code>android.permission.INTERNET</code> tidak ditemukan.
+        Aplikasi menggunakan permission
+        <code>com.android.vending.BILLING</code> untuk integrasi
+        Google Play Billing Library dengan layanan Google Play.
+      </p>
+
+      <p>
+        Penggunaan Google Play Billing berarti transaksi pembelian
+        melibatkan layanan pihak ketiga, yaitu Google Play. Hal ini
+        berbeda dari pemrosesan konten notifikasi, yang tetap dilakukan
+        secara lokal di perangkat dan tidak dikirim ke server pengembang.
+      </p>
+
+      <p>
+        ReNotification! tidak menggunakan backend server pengembang,
+        layanan iklan, atau layanan analitik pihak ketiga berdasarkan
+        implementasi yang diaudit.
+      </p>
+
+      <p>
+        Pemrosesan data oleh Google Play tunduk pada kebijakan privasi
+        dan ketentuan layanan Google.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>5. Keamanan Penyimpanan Lokal, Backup, dan Layar Kunci</h2>
+
+      <p>
+        Data aplikasi disimpan secara lokal menggunakan penyimpanan
+        Android seperti Room Database dan DataStore sesuai kebutuhan
+        fitur aplikasi.
+      </p>
+
+      <p>
+        Database riwayat dan sesi notifikasi
+        (<code>renotification_db</code>), preferensi pemulihan volume
+        sementara, serta cache entitlement Premium
+        (<code>renotification_entitlement_cache_prefs.xml</code>)
+        dikecualikan dari Android Cloud Auto Backup dan transfer
+        antarperangkat berdasarkan aturan backup aplikasi.
+      </p>
+
+      <p>
+        Cache entitlement dilindungi dengan HMAC-SHA256 menggunakan
+        kunci non-exportable yang dikelola Android Keystore.
+        Perlindungan ini dirancang untuk mendeteksi perubahan data
+        cache yang tidak sah.
+      </p>
+
+      <p>
+        Data notifikasi yang ditampilkan pada layar kunci menggunakan
+        pengaturan privasi notifikasi Android
+        (<code>VISIBILITY_PRIVATE</code>) sesuai implementasi aplikasi.
+        Tampilan sebenarnya juga dapat dipengaruhi pengaturan Android
+        dan perangkat pengguna.
+      </p>
+
+      <p>
+        Kami menerapkan perlindungan yang sesuai dengan arsitektur
+        aplikasi, tetapi tidak ada metode penyimpanan elektronik
+        yang dapat dijamin sepenuhnya bebas risiko.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>6. Penghapusan Data dan Kontak Pengembang</h2>
+
+      <p>
+        Pengguna dapat menghapus data lokal ReNotification! melalui
+        fitur yang tersedia di aplikasi atau melalui pengaturan
+        sistem Android, termasuk dengan menghapus data aplikasi
+        atau mencopot pemasangan aplikasi.
+      </p>
+
+      <p>
+        Penghapusan data aplikasi atau pencopotan pemasangan tidak
+        menghapus riwayat transaksi pembelian yang dikelola oleh
+        akun Google Play pengguna. Pengelolaan transaksi tersebut
+        mengikuti kebijakan dan mekanisme Google Play.
+      </p>
+
+      <p>
+        Jika pengguna memiliki pertanyaan, masukan, atau permintaan
+        terkait privasi, silakan hubungi pengembang melalui alamat
+        berikut:
+      </p>
+
+      <div class="contact">
+        <strong>Developer / Feedback</strong>
+        <p>
+          <a href="mailto:pen.things.dev@gmail.com">
+            pen.things.dev@gmail.com
+          </a>
+        </p>
+      </div>
+    </section>
+
   </div>
 
-  <h1>
-    <span data-id>Kebijakan<br>Privasi</span>
-    <span data-en hidden>Privacy<br>Policy</span>
-    <span class="accent">ReNotification!</span>
-  </h1>
+  <!-- ENGLISH VERSION -->
+  <div id="policy-en" lang="en" hidden>
 
-  <p class="hero-description" data-id>
-    ReNotification! dirancang dengan pendekatan privasi lokal.
-    Informasi notifikasi diproses di perangkat Anda dan tidak
-    dikirim ke server kami.
-  </p>
+    <div class="notice">
+      <strong>Privacy summary</strong>
+      <p>
+        ReNotification! processes notification data locally on your device.
+        Notification content is not sent to the developer's servers.
+        Premium Lifetime purchases are handled through Google Play Billing.
+      </p>
+    </div>
 
-  <p class="hero-description" data-en hidden>
-    ReNotification! is designed with a local-first privacy approach.
-    Notification information is processed on your device and is not
-    transmitted to our servers.
-  </p>
+    <section class="policy-section">
+      <h2>1. Local Notification Processing and Data</h2>
 
-  <div class="updated">
-    <span data-id>Terakhir diperbarui: 23 November 2026</span>
-    <span data-en hidden>Last updated: November 23, 2026</span>
+      <p>
+        ReNotification! uses Android Notification Access permission
+        to read notifications received by your device and provide
+        notification reminder or repetition features according to
+        your settings.
+      </p>
+
+      <p>Information that may be accessed includes:</p>
+      <ul>
+        <li>The name of the source application.</li>
+        <li>Notification title.</li>
+        <li>Notification content or text.</li>
+        <li>The time the notification was received.</li>
+        <li>The list of applications available on your device for monitoring configuration.</li>
+      </ul>
+
+      <p>
+        Notifications may contain personal messages, OTP codes,
+        or transaction information. You are responsible for selecting
+        which applications are monitored.
+      </p>
+
+      <p>
+        Notification data is processed and stored locally on your device.
+        ReNotification! does not send this notification content to
+        the developer's servers.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>2. Purpose of Notification Data Processing</h2>
+
+      <p>
+        Notification information is used only to provide the application's
+        core functionality, including:
+      </p>
+
+      <ul>
+        <li>Repeating or reminding you of notifications.</li>
+        <li>Applying user-defined repetition intervals and limits.</li>
+        <li>Following active schedules and quiet hours.</li>
+        <li>Applying keyword filters configured by the user.</li>
+        <li>Running anti-spam and duplicate-notification protections.</li>
+        <li>Maintaining notification history locally.</li>
+      </ul>
+
+      <p>
+        The developer does not use this data for advertising,
+        behavioral tracking, or selling it to other parties.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>3. Google Play Billing and Premium Lifetime Purchases</h2>
+
+      <p>
+        ReNotification! offers Premium Lifetime through Google Play Billing.
+        This is a one-time, non-consumable purchase and is not a recurring
+        subscription.
+      </p>
+
+      <p>
+        Payment transactions are processed and managed by Google Play.
+        Sensitive payment information such as card numbers, bank account
+        numbers, or payment credentials is not accessed or stored by
+        ReNotification!.
+      </p>
+
+      <p>
+        The application receives purchase status information required
+        to check product ownership and grant Premium access.
+        Purchase acknowledgement is also handled through Google Play Billing.
+      </p>
+
+      <p>
+        To maintain Premium access status locally, the application stores
+        an entitlement cache protected using HMAC-SHA256 and Android Keystore.
+        The cache stores a purchase token hash, not the raw purchase token.
+      </p>
+
+      <p>
+        The raw purchase token is not written to application logs and
+        is not stored as a raw token in the entitlement cache.
+        ReNotification! does not operate a backend server to receive
+        or verify purchase tokens.
+      </p>
+
+      <p>
+        If Google Play is temporarily unavailable, the application may
+        use a previously verified Premium status for an offline grace
+        period of up to 7 days. After that period, if valid re-verification
+        has not occurred, Premium access may return to the Free status.
+      </p>
+
+      <p>
+        For more information about Google's data practices:
+        <a href="https://policies.google.com/privacy"
+           target="_blank" rel="noopener noreferrer">
+          Google Privacy Policy
+        </a>.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>4. App Permissions, Data Sharing, and Third-Party Services</h2>
+
+      <p>
+        ReNotification! uses Android permissions required for its
+        functionality, including Notification Access and other permissions
+        needed for reminders, schedules, and process protection.
+      </p>
+
+      <p>
+        In the audited merged manifest, the
+        <code>android.permission.INTERNET</code> permission was not present.
+        The application uses
+        <code>com.android.vending.BILLING</code> for integration with
+        the Google Play Billing Library and Google Play services.
+      </p>
+
+      <p>
+        The use of Google Play Billing means that purchase transactions
+        involve a third-party service, Google Play. This is separate
+        from notification content processing, which remains local
+        on the device and is not sent to the developer's servers.
+      </p>
+
+      <p>
+        Based on the audited implementation, ReNotification! does not
+        use a developer-operated backend server, advertising services,
+        or third-party analytics services.
+      </p>
+
+      <p>
+        Data processing by Google Play is subject to Google's privacy
+        policy and terms of service.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>5. Local Storage Security, Backup, and Lock Screen</h2>
+
+      <p>
+        Application data is stored locally using Android storage
+        technologies such as Room Database and DataStore as required
+        by the application's features.
+      </p>
+
+      <p>
+        The notification history and session database
+        (<code>renotification_db</code>), temporary volume recovery
+        preferences, and Premium entitlement cache
+        (<code>renotification_entitlement_cache_prefs.xml</code>)
+        are excluded from Android Cloud Auto Backup and device-to-device
+        transfer according to the application's backup rules.
+      </p>
+
+      <p>
+        The entitlement cache is protected with HMAC-SHA256 using
+        a non-exportable key managed by Android Keystore.
+        This protection is designed to detect unauthorized changes
+        to cached data.
+      </p>
+
+      <p>
+        Notification content displayed on the lock screen uses
+        Android notification privacy settings
+        (<code>VISIBILITY_PRIVATE</code>) according to the application's
+        implementation. Actual display behavior may also depend on
+        Android and device settings.
+      </p>
+
+      <p>
+        We apply safeguards appropriate to the application's architecture,
+        but no electronic storage method can be guaranteed to be
+        completely risk-free.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>6. Data Deletion and Developer Contact</h2>
+
+      <p>
+        You can delete local ReNotification! data through features
+        provided by the application or through Android system settings,
+        including clearing application data or uninstalling the application.
+      </p>
+
+      <p>
+        Clearing application data or uninstalling the application does
+        not delete purchase transaction records managed by your Google
+        Play account. Those transactions remain subject to Google Play's
+        policies and mechanisms.
+      </p>
+
+      <p>
+        If you have questions, feedback, or privacy-related requests,
+        please contact the developer at:
+      </p>
+
+      <div class="contact">
+        <strong>Developer / Feedback</strong>
+        <p>
+          <a href="mailto:pen.things.dev@gmail.com">
+            pen.things.dev@gmail.com
+          </a>
+        </p>
+      </div>
+    </section>
+
   </div>
 
-</section>
-
-<!-- SUMMARY -->
-
-<div class="summary">
-
-  <div class="summary-card">
-    <div class="summary-icon">📱</div>
-    <h3>
-      <span data-id>Pemrosesan Lokal</span>
-      <span data-en hidden>Local Processing</span>
-    </h3>
-    <p>
-      <span data-id>Data diproses langsung di perangkat.</span>
-      <span data-en hidden>Data is processed on your device.</span>
-    </p>
-  </div>
-
-  <div class="summary-card">
-    <div class="summary-icon">🚫</div>
-    <h3>
-      <span data-id>Tanpa Pelacakan</span>
-      <span data-en hidden>No Tracking</span>
-    </h3>
-    <p>
-      <span data-id>Tanpa iklan atau analytics.</span>
-      <span data-en hidden>No ads or analytics.</span>
-    </p>
-  </div>
-
-  <div class="summary-card">
-    <div class="summary-icon">🌐</div>
-    <h3>
-      <span data-id>Tanpa Server</span>
-      <span data-en hidden>No Servers</span>
-    </h3>
-    <p>
-      <span data-id>Tidak mengirim data ke server eksternal.</span>
-      <span data-en hidden>No data sent to external servers.</span>
-    </p>
-  </div>
-
-  <div class="summary-card">
-    <div class="summary-icon">🛡️</div>
-    <h3>
-      <span data-id>Kontrol Pengguna</span>
-      <span data-en hidden>User Control</span>
-    </h3>
-    <p>
-      <span data-id>Anda mengontrol izin aplikasi.</span>
-      <span data-en hidden>You control app permissions.</span>
-    </p>
-  </div>
-
-</div>
-
-<div class="content">
-
-<!-- 1 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>1. Pendahuluan</span>
-    <span data-en hidden>1. Introduction</span>
-  </h2>
-
-  <p data-id>
-    ReNotification! adalah aplikasi Android yang membantu
-    mengelola dan mengingatkan pengguna tentang notifikasi
-    tertentu. Kebijakan ini menjelaskan bagaimana aplikasi
-    mengakses, menggunakan, menyimpan, dan melindungi
-    informasi di perangkat Anda.
-  </p>
-
-  <p data-en hidden>
-    ReNotification! is an Android application that helps users
-    manage and receive reminders about selected notifications.
-    This policy explains how the app accesses, uses, stores,
-    and protects information on your device.
-  </p>
-
-  <div class="highlight">
-    <p data-id>
-      <strong>Prinsip utama:</strong> Informasi diproses secara
-      lokal. ReNotification! tidak memiliki server pengumpulan
-      data pengguna.
-    </p>
-
-    <p data-en hidden>
-      <strong>Core principle:</strong> Information is processed locally.
-      ReNotification! does not operate a user data collection server.
-    </p>
-  </div>
-
-</section>
-
-<!-- 2 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>2. Informasi yang Diakses</span>
-    <span data-en hidden>2. Information Accessed</span>
-  </h2>
-
-  <p data-id>
-    Bergantung pada fitur yang Anda gunakan, aplikasi dapat
-    mengakses informasi berikut:
-  </p>
-
-  <p data-en hidden>
-    Depending on the features you use, the app may access:
-  </p>
-
-  <ul data-id>
-    <li>Informasi notifikasi dari aplikasi yang Anda pilih.</li>
-    <li>Nama aplikasi sumber notifikasi.</li>
-    <li>Konten notifikasi yang diperlukan untuk fungsi pengingat.</li>
-    <li>Preferensi dan konfigurasi pengingat.</li>
-    <li>Pengaturan suara atau file ringtone pilihan Anda.</li>
-  </ul>
-
-  <ul data-en hidden>
-    <li>Notification information from apps you select.</li>
-    <li>The source application name.</li>
-    <li>Notification content required for reminder functionality.</li>
-    <li>Reminder preferences and configurations.</li>
-    <li>Sound settings or ringtone files you select.</li>
-  </ul>
-
-  <p data-id>
-    Informasi tersebut diakses hanya sejauh diperlukan
-    untuk menjalankan fungsi aplikasi.
-  </p>
-
-  <p data-en hidden>
-    This information is accessed only to the extent necessary
-    for the app's functionality.
-  </p>
-
-</section>
-
-<!-- 3 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>3. Penggunaan Informasi</span>
-    <span data-en hidden>3. Use of Information</span>
-  </h2>
-
-  <p data-id>Informasi digunakan untuk:</p>
-  <p data-en hidden>Information is used to:</p>
-
-  <ul data-id>
-    <li>Mendeteksi notifikasi yang sesuai dengan aturan Anda.</li>
-    <li>Membuat dan mengelola sesi pengingat.</li>
-    <li>Menampilkan riwayat notifikasi yang relevan.</li>
-    <li>Menjalankan fitur suara dan pengingat.</li>
-    <li>Menyimpan preferensi aplikasi.</li>
-  </ul>
-
-  <ul data-en hidden>
-    <li>Detect notifications matching your rules.</li>
-    <li>Create and manage reminder sessions.</li>
-    <li>Display relevant notification history.</li>
-    <li>Run reminder and sound features.</li>
-    <li>Save app preferences.</li>
-  </ul>
-
-  <div class="highlight">
-    <p data-id>
-      Informasi notifikasi tidak digunakan untuk iklan,
-      profil pengguna, atau pelacakan lintas aplikasi.
-    </p>
-
-    <p data-en hidden>
-      Notification information is not used for advertising,
-      user profiling, or cross-app tracking.
-    </p>
-  </div>
-
-</section>
-
-<!-- 4 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>4. Penyimpanan Data</span>
-    <span data-en hidden>4. Data Storage</span>
-  </h2>
-
-  <p data-id>
-    Data aplikasi disimpan secara lokal di perangkat Android
-    Anda menggunakan penyimpanan internal aplikasi.
-  </p>
-
-  <p data-en hidden>
-    App data is stored locally on your Android device
-    using the app's internal storage.
-  </p>
-
-  <p data-id>Penyimpanan lokal meliputi:</p>
-  <p data-en hidden>Local storage includes:</p>
-
-  <ul data-id>
-    <li>Database lokal untuk data pengingat dan riwayat.</li>
-    <li>Data preferensi dan konfigurasi aplikasi.</li>
-    <li>Data sementara untuk pemulihan fungsi tertentu.</li>
-  </ul>
-
-  <ul data-en hidden>
-    <li>Local database for reminder data and history.</li>
-    <li>App preferences and configuration data.</li>
-    <li>Temporary data for certain recovery functions.</li>
-  </ul>
-
-  <p data-id>
-    Database utama dan file preferensi pemulihan volume
-    sementara dikecualikan dari backup Android.
-    Preferensi aplikasi tertentu yang tidak sensitif dapat
-    disertakan dalam backup sistem Android sesuai
-    pengaturan perangkat Anda.
-  </p>
-
-  <p data-en hidden>
-    The main database and temporary volume-recovery
-    preference file are excluded from Android backups.
-    Certain non-sensitive app preferences may be included
-    in Android system backups depending on your device settings.
-  </p>
-
-</section>
-
-<!-- 5 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>5. Berbagi dan Pengiriman Data</span>
-    <span data-en hidden>5. Data Sharing and Transmission</span>
-  </h2>
-
-  <p data-id>
-    ReNotification! tidak mengirim informasi notifikasi,
-    riwayat, atau data pribadi Anda ke server pengembang.
-  </p>
-
-  <p data-en hidden>
-    ReNotification! does not send notification information,
-    history, or personal data to developer servers.
-  </p>
-
-  <ul data-id>
-    <li>Tidak memiliki akun pengguna.</li>
-    <li>Tidak memiliki server pengumpulan data.</li>
-    <li>Tidak menggunakan analytics.</li>
-    <li>Tidak menggunakan advertising SDK.</li>
-    <li>Tidak menjual atau membagikan data pribadi.</li>
-  </ul>
-
-  <ul data-en hidden>
-    <li>No user accounts.</li>
-    <li>No data collection servers.</li>
-    <li>No analytics services.</li>
-    <li>No advertising SDKs.</li>
-    <li>No sale or sharing of personal data.</li>
-  </ul>
-
-  <p data-id>
-    Aplikasi tidak memerlukan izin INTERNET
-    untuk fungsi utamanya.
-  </p>
-
-  <p data-en hidden>
-    The app does not require the INTERNET permission
-    for its core functionality.
-  </p>
-
-</section>
-
-<!-- 6 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>6. Izin Android</span>
-    <span data-en hidden>6. Android Permissions</span>
-  </h2>
-
-  <p data-id>
-    Beberapa fitur memerlukan izin khusus Android.
-    Anda dapat mengelola atau mencabut izin tersebut
-    melalui pengaturan sistem.
-  </p>
-
-  <p data-en hidden>
-    Some features require special Android permissions.
-    You can manage or revoke these permissions
-    through your system settings.
-  </p>
-
-  <h3>
-    <span data-id>Akses Notifikasi</span>
-    <span data-en hidden>Notification Access</span>
-  </h3>
-
-  <p data-id>
-    Digunakan untuk mendeteksi dan memproses notifikasi
-    yang diperlukan oleh fitur pengingat. Akses ini aktif
-    setelah Anda memberikan persetujuan melalui Android.
-  </p>
-
-  <p data-en hidden>
-    Used to detect and process notifications required
-    by reminder features. This access is enabled only
-    after you grant permission through Android.
-  </p>
-
-  <h3>
-    <span data-id>Notifikasi Aplikasi</span>
-    <span data-en hidden>App Notifications</span>
-  </h3>
-
-  <p data-id>
-    Digunakan untuk menampilkan notifikasi pengingat
-    yang dibuat oleh ReNotification!.
-  </p>
-
-  <p data-en hidden>
-    Used to display reminder notifications
-    created by ReNotification!.
-  </p>
-
-  <h3>
-    <span data-id>Alarm dan Pengingat Terjadwal</span>
-    <span data-en hidden>Scheduled Alarms and Reminders</span>
-  </h3>
-
-  <p data-id>
-    Fitur tertentu menggunakan penjadwalan Android agar
-    pengingat berjalan sesuai waktu. Jika izin alarm tepat
-    tidak tersedia, aplikasi dapat menggunakan mekanisme
-    alternatif dengan keterbatasan ketepatan waktu.
-  </p>
-
-  <p data-en hidden>
-    Certain features use Android scheduling to run reminders
-    at the intended time. If exact alarm access is unavailable,
-    the app may use an alternative scheduling method
-    with reduced timing precision.
-  </p>
-
-</section>
-
-<!-- 7 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>7. Keamanan dan Privasi</span>
-    <span data-en hidden>7. Security and Privacy</span>
-  </h2>
-
-  <p data-id>
-    Data disimpan dalam ruang penyimpanan internal Android
-    yang dilindungi oleh mekanisme sandbox sistem operasi.
-  </p>
-
-  <p data-en hidden>
-    Data is stored in Android's internal storage,
-    protected by the operating system's sandbox.
-  </p>
-
-  <p data-id>
-    ReNotification! tidak menyediakan enkripsi database khusus
-    pada tingkat aplikasi. Keamanan data juga bergantung
-    pada keamanan perangkat, pengunci layar,
-    dan sistem operasi Android Anda.
-  </p>
-
-  <p data-en hidden>
-    ReNotification! does not provide separate app-level
-    database encryption. Data security also depends on
-    your device security, screen lock,
-    and Android operating system.
-  </p>
-
-  <p data-id>
-    Notifikasi pada layar kunci mengikuti pengaturan
-    privasi Android dan dapat ditampilkan secara terbatas
-    untuk mengurangi paparan informasi.
-  </p>
-
-  <p data-en hidden>
-    Lock-screen notifications follow Android privacy
-    settings and may be displayed in a redacted form
-    to reduce information exposure.
-  </p>
-
-</section>
-
-<!-- 8 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>8. Retensi dan Penghapusan Data</span>
-    <span data-en hidden>8. Data Retention and Deletion</span>
-  </h2>
-
-  <p data-id>
-    Data disimpan selama diperlukan untuk fungsi aplikasi
-    atau sampai Anda menghapusnya.
-  </p>
-
-  <p data-en hidden>
-    Data is retained as long as necessary
-    for app functionality or until you delete it.
-  </p>
-
-  <p data-id>
-    Anda dapat menghapus data melalui fitur
-    penghapusan riwayat yang tersedia di aplikasi,
-    jika berlaku.
-  </p>
-
-  <p data-en hidden>
-    You can delete data through the app's history
-    deletion feature, where available.
-  </p>
-
-  <p data-id>
-    Menghapus data aplikasi melalui pengaturan Android
-    atau mencopot aplikasi akan menghapus data lokal
-    terkait sesuai mekanisme Android.
-  </p>
-
-  <p data-en hidden>
-    Clearing app data through Android settings or uninstalling
-    the app removes associated local data according
-    to Android's system behavior.
-  </p>
-
-</section>
-
-<!-- 9 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>9. Layanan Pihak Ketiga</span>
-    <span data-en hidden>9. Third-Party Services</span>
-  </h2>
-
-  <p data-id>
-    ReNotification! tidak mengintegrasikan SDK iklan,
-    analytics, atau layanan pelacakan pihak ketiga
-    untuk mengumpulkan data pengguna.
-  </p>
-
-  <p data-en hidden>
-    ReNotification! does not integrate advertising SDKs,
-    analytics, or third-party tracking services
-    to collect user data.
-  </p>
-
-  <p data-id>
-    Aplikasi menggunakan fitur dan API Android
-    yang disediakan oleh sistem operasi untuk
-    menjalankan fungsi yang diminta pengguna.
-  </p>
-
-  <p data-en hidden>
-    The app uses Android system features and APIs
-    to perform functions requested by the user.
-  </p>
-
-</section>
-
-<!-- 10 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>10. Privasi Anak</span>
-    <span data-en hidden>10. Children's Privacy</span>
-  </h2>
-
-  <p data-id>
-    ReNotification! tidak dirancang untuk mengumpulkan
-    informasi pribadi anak-anak. Aplikasi tidak memiliki akun,
-    pengumpulan data online, atau sistem profil pengguna.
-  </p>
-
-  <p data-en hidden>
-    ReNotification! is not designed to collect personal
-    information from children. The app does not have accounts,
-    online data collection, or user profiling systems.
-  </p>
-
-</section>
-
-<!-- 11 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>11. Perubahan Kebijakan</span>
-    <span data-en hidden>11. Policy Changes</span>
-  </h2>
-
-  <p data-id>
-    Kebijakan Privasi ini dapat diperbarui apabila terdapat
-    perubahan fitur atau persyaratan yang relevan.
-    Versi terbaru akan dipublikasikan di halaman ini
-    beserta tanggal pembaruan.
-  </p>
-
-  <p data-en hidden>
-    This Privacy Policy may be updated when relevant features
-    or requirements change. The latest version will be published
-    on this page along with its revision date.
-  </p>
-
-</section>
-
-<!-- 12 -->
-
-<section class="section">
-
-  <h2>
-    <span data-id>12. Hubungi Kami</span>
-    <span data-en hidden>12. Contact Us</span>
-  </h2>
-
-  <p data-id>
-    Jika Anda memiliki pertanyaan, masukan,
-    atau permintaan terkait privasi aplikasi,
-    silakan hubungi pengembang.
-  </p>
-
-  <p data-en hidden>
-    If you have questions, feedback, or requests
-    regarding app privacy, please contact the developer.
-  </p>
-
-  <div class="contact">
-    <p>
-      <strong>
-        <span data-id>Email Pengembang</span>
-        <span data-en hidden>Developer Email</span>
-      </strong>
-    </p>
-
-    <a href="mailto:wahyu3gs@gmail.com">
-      wahyu3gs@gmail.com
-    </a>
-  </div>
-
-</section>
-
-</div>
 </main>
 
 <footer>
   <div class="container">
-    <strong>ReNotification!</strong>
-
+    <p>© 2026 ReNotification! — Pen.Things</p>
+    <p>Privacy Policy</p>
     <p>
-      <span data-id>Dibuat dengan fokus pada privasi dan kontrol pengguna.</span>
-      <span data-en hidden>Built with a focus on privacy and user control.</span>
+      <a href="mailto:pen.things.dev@gmail.com">
+        pen.things.dev@gmail.com
+      </a>
     </p>
-
-    <p>© 2026 ReNotification!</p>
   </div>
 </footer>
 
 <script>
-(function () {
-  "use strict";
+  function setLanguage(language) {
+    const isIndonesian = language === "id";
 
-  let language = "id";
+    document.getElementById("policy-id").hidden = !isIndonesian;
+    document.getElementById("policy-en").hidden = isIndonesian;
 
-  function applyLanguage(newLanguage) {
-    language = newLanguage;
+    document.getElementById("idButton").classList.toggle(
+      "active", isIndonesian
+    );
 
-    document.documentElement.setAttribute("lang", language);
+    document.getElementById("enButton").classList.toggle(
+      "active", !isIndonesian
+    );
 
-    document.querySelectorAll("[data-id]").forEach(function (element) {
-      element.hidden = language !== "id";
-    });
+    document.documentElement.lang = language;
 
-    document.querySelectorAll("[data-en]").forEach(function (element) {
-      element.hidden = language !== "en";
-    });
+    document.getElementById("headerSubtitle").textContent =
+      isIndonesian ? "Kebijakan Privasi" : "Privacy Policy";
 
-    const button = document.getElementById("langBtn");
-
-    if (button) {
-      button.textContent = language === "id" ? "EN" : "ID";
-      button.setAttribute(
-        "aria-label",
-        language === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"
-      );
-    }
+    document.getElementById("updatedLabel").textContent =
+      isIndonesian ? "Terakhir diperbarui:" : "Last updated:";
   }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("langBtn");
-
-    if (button) {
-      button.addEventListener("click", function () {
-        applyLanguage(language === "id" ? "en" : "id");
-      });
-    }
-
-    applyLanguage("id");
-  });
-
-})();
 </script>
 
 </body>
